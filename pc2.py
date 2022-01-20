@@ -13,7 +13,7 @@ logger = logging.getLogger('pc2')
 
 
 # GUARDAMOS EL VALOR DE LA VARIABLE DE ENTORNO
-numeroGrupo = str(os.environ.get('GROUP_NUMBER'))
+numeroGrupo = os.environ.get("GROUP_NUMBER")
 
 # COMANDOS NECESARIOS PARA LA PUESTA EN MARCHA DE LA APLICACIÓN	
 call(["git", "clone", "https://github.com/CDPS-ETSIT/practica_creativa2.git"])
@@ -38,7 +38,7 @@ fCopia = open("practica_creativa2/bookinfo/src/productpage/templates/productpage
 fOriginal = open("practica_creativa2/bookinfo/src/productpage/templates/productpage.html", 'w')
 for line in fCopia:
     if "{% block title %}Simple Bookstore App{% endblock %}" in line:
-        fOriginal.write("{% block title %}Simple Bookstore App - GRUPO" + numeroGrupo + "{% endblock %}")
+        fOriginal.write("{% block title %}Simple Bookstore App - GRUPO " + numeroGrupo + "{% endblock %}")
     else:
         fOriginal.write(line)
 fOriginal.close()
