@@ -33,7 +33,7 @@ logger.debug("Las dependencias han sido instaladas")
 
 
 # MODIFICAMOS EL TITULO DE LA APLICACION
-call(["cp", "/practica_creativa2/bookinfo/src/productpage/templates/productpage.html", "/practica_creativa2/bookinfo/src/productpage/templates/productpageCopia.html"])
+call(["cp", "practica_creativa2/bookinfo/src/productpage/templates/productpage.html", "practica_creativa2/bookinfo/src/productpage/templates/productpageCopia.html"])
 fOriginal = open("practica_creativa2/bookinfo/src/productpage/templates/productpage.html", 'r')
 fCopia = open("practica_creativa2/bookinfo/src/productpage/templates/productpageCopia.html", 'r')
 for line in fCopia:
