@@ -25,7 +25,7 @@ logger.debug("Sistema actualizado")
 
 # INSTALAMOS PIP
 call(["sudo", "apt-get", "install", "python3-pip"])
-logger.debug("pip se ha instalado correctamente) 
+logger.debug("pip se ha instalado correctamente") 
 
 # AÑADIMOS LOS REQUIREMENTS NECESARIOS
 call(["pip3", "install", "-r", "practica_creativa2/bookinfo/src/productpage/requirements.txt"])
