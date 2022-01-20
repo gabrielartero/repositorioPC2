@@ -36,11 +36,11 @@ logger.debug("Las dependencias han sido instaladas")
 call(["cp", "practica_creativa2/bookinfo/src/productpage/templates/productpage.html", "practica_creativa2/bookinfo/src/productpage/templates/productpageCopia.html"])
 fOriginal = open("practica_creativa2/bookinfo/src/productpage/templates/productpage.html", 'r')
 fCopia = open("practica_creativa2/bookinfo/src/productpage/templates/productpageCopia.html", 'r')
-for line in fCopia:
+for line in fOriginal:
     if "{% block title %}Simple Bookstore App{% endblock %}" in line:
-        fOriginal.write("{% block title %}Simple Bookstore App - GRUPO" + numeroGrupo + "{% endblock %}")
+        fCopia.write("{% block title %}Simple Bookstore App - GRUPO" + numeroGrupo + "{% endblock %}")
     else:
-        fOriginal.write(line)
+        fCopia.write(line)
 fOriginal.close()
 fCopia.close()
 logger.debug("Se ha actualizado el título de la aplicación") 
