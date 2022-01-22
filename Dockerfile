@@ -1,9 +1,9 @@
 # VERSIÓN PYTHON
 FROM python:3.7.7-slim
 
-WORKDIR .
+WORKDIR ../apartado2
 
-COPY editarTituloHTML.py
+COPY . /../apartado2
 
 
 RUN git clone https://github.com/CDPS-ETSIT/practica_creativa2.git
