@@ -2,13 +2,9 @@
 
 # REALIZADO POR GABRIEL ARTERO MONSALVATJE Y CARLOTA RUIZ DE CONEJO DE LA SEN
 
-import logging 
 import sys 
 from subprocess import call
 import os
-
-logging.basicConfig(level=logging.DEBUG) 
-logger = logging.getLogger('pc2')
 
 
 # MODIFICAMOS EL TITULO DE LA APLICACION
@@ -22,10 +18,7 @@ for line in fCopia:
         fOriginal.write(line)
 fOriginal.close()
 fCopia.close()
-logger.debug("Se ha actualizado el título de la aplicación") 
-
 
 
 # ARRANCAMOS LA APLICACIÓN
 call(["python3", "practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", "9080"])
-logger.debug("La aplicación se está ejecuntando correctamente. Puede acceder a ella desde https://<ip-publica>:9080/productpage") 
