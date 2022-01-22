@@ -18,3 +18,8 @@ ENTRYPOINT ["python3", "editarTituloHTML.py"]
 
 ENTRYPOINT ["python3", "practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", "9080"]
 
+
+
+# En el terminal, deberemos ejecutar los siguientes comandos Docker:
+# sudo docker build -t grupo23/product-page .
+# sudo docker run -e GROUP_NAME="GRUPO 23" -dp 9080:9080 --name GRUPO23-BOOKSTORE grupo23/product-page
