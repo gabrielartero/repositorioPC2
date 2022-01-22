@@ -1,9 +1,7 @@
 # VERSIÓN PYTHON
 FROM python:3.7.7-slim
 
-WORKDIR ../apartado2
-
-COPY . /../apartado2
+WORKDIR .
 
 
 RUN git clone https://github.com/CDPS-ETSIT/practica_creativa2.git
