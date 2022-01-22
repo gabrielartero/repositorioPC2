@@ -2,11 +2,6 @@ FROM ruby:2.7.1-slim
 
 WORKDIR .
 
-RUN apt-get update -y
-
-RUN apt-get install git -y
-
-RUN git clone https://github.com/CDPS-ETSIT/practica_creativa2.git
 
 COPY practica_creativa2/bookinfo/src/details/details.rb opt/microservices/
 
