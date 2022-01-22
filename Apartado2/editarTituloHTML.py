@@ -23,3 +23,7 @@ for line in fCopia:
 fOriginal.close()
 fCopia.close()
 logger.debug("Se ha actualizado el título de la aplicación") 
+
+
+# ARRANCAMOS LA APLICACIÓN
+call(["python3", "practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", "9080"])
