@@ -12,9 +12,9 @@ logger = logging.getLogger('pc2')
 
 
 # MODIFICAMOS EL TITULO DE LA APLICACION
-call(["cp", "./practica_creativa2/bookinfo/src/productpage/templates/productpage.html", "./practica_creativa2/bookinfo/src/productpage/templates/productpageCopia.html"])
-fCopia = open("./practica_creativa2/bookinfo/src/productpage/templates/productpageCopia.html", 'r')
-fOriginal = open("./practica_creativa2/bookinfo/src/productpage/templates/productpage.html", 'w')
+call(["cp", "practica_creativa2/bookinfo/src/productpage/templates/productpage.html", "practica_creativa2/bookinfo/src/productpage/templates/productpageCopia.html"])
+fCopia = open("practica_creativa2/bookinfo/src/productpage/templates/productpageCopia.html", 'r')
+fOriginal = open("practica_creativa2/bookinfo/src/productpage/templates/productpage.html", 'w')
 for line in fCopia:
     if "{% block title %}Simple Bookstore App{% endblock %}" in line:
         fOriginal.write("{% block title %}Simple Bookstore App - GRUPO " + numeroGrupo + "{% endblock %}")
