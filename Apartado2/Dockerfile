@@ -14,7 +14,7 @@ EXPOSE 9080
 
 ENV GROUP_NAME=23
 
-ENTRYPOINT ["pyhton3", "editarTituloHTML.py"]
+CMD ["pyhton3", "editarTituloHTML.py"]
 
-ENTRYPOINT ["python3", "practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", "9080"]
+#ENTRYPOINT ["python3", "practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", "9080"]
 
