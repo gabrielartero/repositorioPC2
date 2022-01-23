@@ -16,7 +16,7 @@ ENV GROUP_NAME="23"
 
 CMD ["python3", "editarTituloHTML.py"]
 
-#ENTRYPOINT ["python3", "practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", "9080"]
+ENTRYPOINT ["python3", "practica_creativa2/bookinfo/src/productpage/productpage_monolith.py", "9080"]
 
 
 
