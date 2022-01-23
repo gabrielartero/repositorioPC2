@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: productpage
-        image: grupo23/productpage:v1
+        image: gabrielartero/productpage:v1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
@@ -44,7 +44,7 @@ spec:
           runAsUser: 1000
 ---
 ##################################################################################################
-# External IP
+# IP EXTERNA
 ##################################################################################################
 apiVersion: v1
 kind: Service
