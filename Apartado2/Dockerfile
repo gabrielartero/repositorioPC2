@@ -3,6 +3,8 @@ FROM python:3.7.7-slim
 
 WORKDIR .
 
+COPY editarTituloHTML.py .
+
 RUN apt-get update -y
 
 RUN apt-get install git -y
