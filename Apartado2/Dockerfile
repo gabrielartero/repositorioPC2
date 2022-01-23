@@ -12,7 +12,7 @@ RUN pip3 install -r practica_creativa2/bookinfo/src/productpage/requirements.txt
 
 EXPOSE 9080
 
-ENV GROUP_NAME="23"
+ENV GROUP_NAME numeroGrupo
 
 ENTRYPOINT ["python3", "editarTituloHTML.py"]
 
