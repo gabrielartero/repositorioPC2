@@ -1,12 +1,18 @@
 version: "3.3"
 services:
   productpage:
+    build:
+      context: .
+      dockerfile: Dockerfile-Productpage
     image: grupo23/productpage
     ports:
       - 9080:9080
     container_name: grupo23-productpage
 
   details:
+    build:
+      context: .
+      dockerfile: Dockerfile-Details
     image: grupo23/details
     environment:
       - SERVICE_VERSION=v1
@@ -16,7 +22,11 @@ services:
       - productpage
     ports:
       - 9080
+      
   reviews:
+    build:
+      context: .
+      dockerfile: Dockerfile-Reviews
     image: grupo23/reviews
     container_name: grupo23-reviews
     environment:
@@ -29,6 +39,9 @@ services:
       - 9080
 
   ratings:
+    build:
+      context: .
+      dockerfile: Dockerfile-Ratings
     image: grupo23/ratings
     container_name: grupo23-ratings
     ports:
