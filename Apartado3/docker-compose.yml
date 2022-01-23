@@ -5,8 +5,6 @@ services:
     ports:
       - 9080:9080
     container_name: grupo23-productpage
-    volumes:
-      - productpage:/bookinfo/src/productpage
 
   details:
     image: grupo23/details
@@ -16,15 +14,12 @@ services:
     container_name: grupo23-details
     depends_on:
       - productpage
-    volumes:
-      - details:/opt/microservices
     ports:
       - 9080
   reviews:
     image: grupo23/reviews
     container_name: grupo23-reviews
     environment:
-      - SERVERDIRNAME=reviews
       - SERVICE_VERSION=v1
       - ENABLE_RATINGS=true
       - STAR_COLOR=black
@@ -32,8 +27,6 @@ services:
       - productpage
     ports:
       - 9080
-    volumes:
-      - reviews:/opt/ibm/wlp/usr/servers/defaultServer
 
   ratings:
     image: grupo23/ratings
@@ -44,11 +37,4 @@ services:
       - SERVICE_VERSION=v1
     depends_on:
       - reviews
-    volumes:
-      - ratings:/opt/microservices
 
-volumes:
-  productpage:
-  details:
-  reviews:
-  ratings:
