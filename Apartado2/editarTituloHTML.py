@@ -7,6 +7,10 @@ from subprocess import call
 import os
 
 
+# GUARDAMOS EL VALOR DE LA VARIABLE DE ENTORNO
+numeroGrupo = os.environ.get("GROUP_NUMBER")
+
+
 # MODIFICAMOS EL TITULO DE LA APLICACION
 call(["cp", "practica_creativa2/bookinfo/src/productpage/templates/productpage.html", "practica_creativa2/bookinfo/src/productpage/templates/productpageCopia.html"])
 fCopia = open("practica_creativa2/bookinfo/src/productpage/templates/productpageCopia.html", 'r')
